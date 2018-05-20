@@ -12,76 +12,35 @@
   var context = canvas.getContext('2d');
   var newtext = document.getElementById('newtext');
 
-  var current = {
-    color: 'black'
-  };
-  var drawing = false;
+  //var  = document.getElementById('');
+  var menu = document.getElementById('menu');
+  var main = document.getElementById('main');
+  var move = document.getElementById('move');
+  var help = document.getElementById('help');
+  var reset = document.getElementById('reset');
+  var clear = document.getElementById('clear');
+  var next = document.getElementById('next');
+  var previous = document.getElementById('previous');
+  var settings = document.getElementById('settings');
+  var volume = document.getElementById('volume');
+  var brightness = document.getElementById('brightness');
+  var increase = document.getElementById('increase');
+  var procedures = document.getElementById('procedures');
+  var biometrics = document.getElementById('biometrics');
+  var capture = document.getElementById('capture');
+  var toggle = document.getElementById('toggle');
+  var musicoff = document.getElementById('musicoff');
+  var disablealarm = document.getElementById('disablealarm');
+  var reroutepower = document.getElementById('Reroute Power');
+  var lightswitch = document.getElementById('lightswitch');
 
+  /*
   loadButton.addEventListener('mousedown', loadPicture, false);
   sendButton.addEventListener('mousedown', sendPicture, false);
   spaceSuitButton.addEventListener('mousedown', spaceSuitPicutre, false);
 
-  canvas.addEventListener('mousedown', onMouseDown, false);
-  canvas.addEventListener('mouseup', onMouseUp, false);
-  canvas.addEventListener('mouseout', onMouseUp, false);
-  canvas.addEventListener('mousemove', throttle(onMouseMove, 10), false);
-
-  for (var i = 0; i < colors.length; i++){
-    colors[i].addEventListener('click', onColorUpdate, false);
-  }
-
   socket.on('pictureFromHolo', onPictureReceived);
   socket.on('picture', onPictureSent);
-
-  function drawLine(x0, y0, x1, y1, color, emit){
-    context.beginPath();
-    context.moveTo(x0, y0);
-    context.lineTo(x1, y1);
-    context.strokeStyle = color;
-    context.lineWidth = 14;
-    context.stroke();
-    context.closePath();
-
-    if (!emit) { return; }
-    var w = canvas.width;
-    var h = canvas.height;
-  }
-
-  function onMouseDown(e){
-    drawing = true;
-    current.x = e.clientX;
-    current.y = e.clientY;
-  }
-
-  function onMouseUp(e){
-    if (!drawing) { return; }
-    drawing = false;
-    drawLine(current.x, current.y, e.clientX, e.clientY, current.color, true);
-  }
-
-  function onMouseMove(e){
-    if (!drawing) { return; }
-    drawLine(current.x, current.y, e.clientX, e.clientY, current.color, true);
-    current.x = e.clientX;
-    current.y = e.clientY;
-  }
-
-  function onColorUpdate(e){
-    current.color = e.target.className.split(' ')[1];
-  }
-
-  // limit the number of events per second
-  function throttle(callback, delay) {
-    var previousCall = new Date().getTime();
-    return function() {
-      var time = new Date().getTime();
-
-      if ((time - previousCall) >= delay) {
-        previousCall = time;
-        callback.apply(null, arguments);
-      }
-    };
-  }
 
   function onPictureReceived(data) {
 
@@ -135,4 +94,5 @@
     img.src = 'vroom.png';
     // onResize();
   }
+*/
 })();

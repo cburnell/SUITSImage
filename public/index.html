@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas class="whiteboard"></canvas>
   <div class="colors">
     <div class="color black"></div>
     <div class="color red"></div>
@@ -18,7 +19,7 @@
     <button id="send" class="buttons">Send</button>
     <button id="spacesuit" class="buttons">From Suit</button>
     <br />
-    <canvas class="whiteboard" ></canvas>
+    <textarea rows="2" cols="50" id="newtext"> </textarea>
   </div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/public/main.js" type="text/javascript" ></script>
