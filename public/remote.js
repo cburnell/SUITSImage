@@ -3,17 +3,12 @@
 (function() {
 
   var socket = io();
-  var canvas = document.getElementsByClassName('whiteboard')[0];
-  var colors = document.getElementsByClassName('color');
-  var loadButton = document.getElementById('load');
-  var sendButton = document.getElementById('send');
-  var spaceSuitButton = document.getElementById('spacesuit');
-  var picture = document.getElementById('picture');
-  var context = canvas.getContext('2d');
-  var newtext = document.getElementById('newtext');
 
   //var  = document.getElementById('');
-  
+  socket.on('command', onCommand)
+  function onCommand(data) {
+    console.log(data);
+  }
   var menu = document.getElementById('menu');
   menu.addEventListener('mousedown', menuDown, false);
   function menuDown() {
@@ -74,6 +69,11 @@
   function increaseDown() {
     socket.emit('command', 'increase');
   }
+  var decrease = document.getElementById('decrease');
+  decrease.addEventListener('mousedown', increaseDown, false);
+  function decreaseDown() {
+    socket.emit('command', 'decrease');
+  }
   var procedures = document.getElementById('procedures');
   procedures.addEventListener('mousedown', proceduresDown, false);
   function proceduresDown() {
@@ -104,7 +104,7 @@
   function disablealarmDown() {
     socket.emit('command', 'disablealarm');
   }
-  var reroutepower = document.getElementById('Reroute Power');
+  var reroutepower = document.getElementById('reroutepower');
   reroutepower.addEventListener('mousedown', reroutepowerDown, false);
   function reroutepowerDown() {
     socket.emit('command', 'reroutepower');

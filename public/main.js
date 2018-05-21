@@ -84,7 +84,7 @@
   }
 
   function onPictureReceived(data) {
-
+    console.log("pictured received");
     console.log(data);
     var blob = new Blob([data],{type: "image/png"});
 
