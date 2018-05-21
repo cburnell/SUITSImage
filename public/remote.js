@@ -13,27 +13,107 @@
   var newtext = document.getElementById('newtext');
 
   //var  = document.getElementById('');
+  
   var menu = document.getElementById('menu');
+  menu.addEventListener('mousedown', menuDown, false);
+  function menuDown() {
+    socket.emit('command', 'menu');
+  }
   var main = document.getElementById('main');
+  main.addEventListener('mousedown', mainDown, false);
+  function mainDown() {
+    socket.emit('command', 'main');
+  }
   var move = document.getElementById('move');
+  move.addEventListener('mousedown', moveDown, false);
+  function moveDown() {
+    socket.emit('command', 'move');
+  }
   var help = document.getElementById('help');
+  help.addEventListener('mousedown', helpDown, false);
+  function helpDown() {
+    socket.emit('command', 'help');
+  }
   var reset = document.getElementById('reset');
+  reset.addEventListener('mousedown', resetDown, false);
+  function resetDown() {
+    socket.emit('command', 'reset');
+  }
   var clear = document.getElementById('clear');
+  clear.addEventListener('mousedown', clearDown, false);
+  function clearDown() {
+    socket.emit('command', 'clear');
+  }
   var next = document.getElementById('next');
+  next.addEventListener('mousedown', nextDown, false);
+  function nextDown() {
+    socket.emit('command', 'next');
+  }
   var previous = document.getElementById('previous');
+  previous.addEventListener('mousedown', previousDown, false);
+  function previousDown() {
+    socket.emit('command', 'previous');
+  }
   var settings = document.getElementById('settings');
+  settings.addEventListener('mousedown', settingsDown, false);
+  function settingsDown() {
+    socket.emit('command', 'settings');
+  }
   var volume = document.getElementById('volume');
+  volume.addEventListener('mousedown', volumeDown, false);
+  function volumeDown() {
+    socket.emit('command', 'volume');
+  }
   var brightness = document.getElementById('brightness');
+  brightness.addEventListener('mousedown', brightnessDown, false);
+  function brightnessDown() {
+    socket.emit('command', 'brightness');
+  }
   var increase = document.getElementById('increase');
+  increase.addEventListener('mousedown', increaseDown, false);
+  function increaseDown() {
+    socket.emit('command', 'increase');
+  }
   var procedures = document.getElementById('procedures');
+  procedures.addEventListener('mousedown', proceduresDown, false);
+  function proceduresDown() {
+    socket.emit('command', 'procedures');
+  }
   var biometrics = document.getElementById('biometrics');
+  biometrics.addEventListener('mousedown', biometricsDown, false);
+  function biometricsDown() {
+    socket.emit('command', 'biometrics');
+  }
   var capture = document.getElementById('capture');
+  capture.addEventListener('mousedown', captureDown, false);
+  function captureDown() {
+    socket.emit('command', 'capture');
+  }
   var toggle = document.getElementById('toggle');
+  toggle.addEventListener('mousedown', toggleDown, false);
+  function toggleDown() {
+    socket.emit('command', 'toggle');
+  }
   var musicoff = document.getElementById('musicoff');
+  musicoff.addEventListener('mousedown', musicoffDown, false);
+  function musicoffDown() {
+    socket.emit('command', 'musicoff');
+  }
   var disablealarm = document.getElementById('disablealarm');
+  disablealarm.addEventListener('mousedown', disablealarmDown, false);
+  function disablealarmDown() {
+    socket.emit('command', 'disablealarm');
+  }
   var reroutepower = document.getElementById('Reroute Power');
+  reroutepower.addEventListener('mousedown', reroutepowerDown, false);
+  function reroutepowerDown() {
+    socket.emit('command', 'reroutepower');
+  }
   var lightswitch = document.getElementById('lightswitch');
-
+lightswitch.addEventListener('mousedown', lightswitchDown, false);
+function lightswitchDown() {
+  socket.emit('command', 'lightswitch');
+}
   /*
   loadButton.addEventListener('mousedown', loadPicture, false);
   sendButton.addEventListener('mousedown', sendPicture, false);
